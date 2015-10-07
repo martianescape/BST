@@ -190,7 +190,9 @@ def delete(key)
       if curr.rChild != replNode; replNode.rChild = curr.rChild; end
       add_child(replNodeParent, replNode.key, nil)
     end
-    parent, curr = find_parent(, nil, @root)
+    
+    node_for_balancing = 
+    parent, curr = find_parent(replNodeParent.key, nil, @root)
     
   end
 end
